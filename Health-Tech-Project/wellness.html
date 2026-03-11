@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Timer - Health Companion</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Health Companion</a>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wellness.html" class="active">Wellness</a></li>
+        <li><a href="symptoms.html">Symptoms</a></li>
+        <li><a href="clinics.html">Clinics</a></li>
+        <li><a href="chatbot.html">AI Doctor</a></li>
+      </ul>
+    </nav>
+
+    <section class="page-hero">
+      <h1>&#127807; Wellness Timer</h1>
+      <p>Stay productive and healthy with focused work sessions and wellness habits.</p>
+    </section>
+
+    <section class="page-content">
+      <div class="feature-card">
+        <h2>Focus Session</h2>
+        <div class="timer-display" id="time">25:00</div>
+        <div class="progress-bar">
+          <div id="progress"></div>
+        </div>
+        <div class="timer-controls">
+          <button class="btn-primary" onclick="startTimer()">Start</button>
+          <button class="btn-secondary" onclick="pauseTimer()">Pause</button>
+          <button class="btn-secondary" onclick="resetTimer()">Reset</button>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <h2>Healthy Habits</h2>
+        <p class="subtitle">Earn points by completing wellness activities</p>
+        <div class="habit-grid">
+          <button class="habit-btn" onclick="addScore()">&#128167; Drink Water</button>
+          <button class="habit-btn" onclick="addScore()">&#129496; Stretch</button>
+          <button class="habit-btn" onclick="addScore()">&#127788; Breathing</button>
+        </div>
+        <div class="score-display">
+          <span>Your Score:</span>
+          <span id="score" class="score-value">0</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Health Companion. Your health, our priority.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

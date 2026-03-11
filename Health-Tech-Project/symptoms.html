@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symptom Checker - Health Companion</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Health Companion</a>
+      <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Toggle menu"
+      >
+        &#9776;
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wellness.html">Wellness</a></li>
+        <li><a href="symptoms.html" class="active">Symptoms</a></li>
+        <li><a href="clinics.html">Clinics</a></li>
+        <li><a href="chatbot.html">AI Doctor</a></li>
+      </ul>
+    </nav>
+
+    <section class="page-hero">
+      <h1>&#129504; Symptom Checker</h1>
+      <p>Describe your symptoms and find out which specialist to consult.</p>
+    </section>
+
+    <section class="page-content">
+      <div class="feature-card symptom-card">
+        <h2>What are you feeling?</h2>
+        <div class="input-group">
+          <input
+            id="symptom"
+            type="text"
+            placeholder="e.g. fever, headache, skin rash, eye pain..."
+          />
+          <button class="btn-primary" onclick="checkSymptom()">Check</button>
+        </div>
+        <div id="result" class="result-box"></div>
+
+        <div class="symptom-hints">
+          <h3>Common Symptoms</h3>
+          <div class="hint-tags">
+            <span class="tag" onclick="fillSymptom('fever')">Fever</span>
+            <span class="tag" onclick="fillSymptom('cough')">Cough</span>
+            <span class="tag" onclick="fillSymptom('skin rash')"
+              >Skin Rash</span
+            >
+            <span class="tag" onclick="fillSymptom('eye pain')">Eye Pain</span>
+            <span class="tag" onclick="fillSymptom('headache')">Headache</span>
+            <span class="tag" onclick="fillSymptom('stomach pain')"
+              >Stomach Pain</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Health Companion. Your health, our priority.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
