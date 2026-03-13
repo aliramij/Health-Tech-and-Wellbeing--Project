@@ -89,6 +89,11 @@
         </p>
       </div>
     </div>    <script>
+      // Check if the page is opened directly from file system
+      if (window.location.protocol === 'file:') {
+        document.body.innerHTML = '<div style="display:flex; align-items:center; justify-content:center; height:100vh; font-family:Arial, sans-serif;"><div style="text-align:center;"><h1>Please Run the Server</h1><p>To use the login functionality, please run the server first:</p><code>npm run dev</code><p>Then open <a href="http://localhost:3000/login.html">http://localhost:3000/login.html</a> in your browser.</p></div></div>';
+      }
+
       function showErrorMessage() {
         const params = new URLSearchParams(window.location.search);
         if (params.get('error') === 'notfound') {
@@ -99,12 +104,7 @@
       }
 
       document.getElementById('loginForm').addEventListener('submit', function(e) {
-        const pwd = document.getElementById('password').value;
-        const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
-        if (!regex.test(pwd)) {
-          e.preventDefault();
-          alert('Password must be at least 8 characters long and include an uppercase letter, a number, and a special character.');
-        }
+        // No password validation needed for login; server handles it
       });
 
       // toggle visibility

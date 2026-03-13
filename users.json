@@ -50,5 +50,17 @@
     "email": "asif@gmail.com",
     "password": "aliasifQ1213@ssd",
     "timestamp": "2026-03-13T14:53:44.907Z"
+  },
+  {
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "TestPass123!",
+    "timestamp": "2026-03-13T16:29:05.646Z"
+  },
+  {
+    "username": "2024-C627",
+    "email": "aliramij899@gmail.com",
+    "password": "ali@sdasQQ1",
+    "timestamp": "2026-03-13T16:35:59.379Z"
   }
 ]
